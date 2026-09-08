@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:5173", "https://YOUR-DASHBOARD-NAME.vercel.app"])
 @app.route('/')
 def index():
     return jsonify({
