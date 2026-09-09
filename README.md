@@ -1,4 +1,4 @@
-# Supply Chain Analytics Engine
+# Supply Chain Analytics Engine | [Try Live Dashboard](https://supply-chain-analytics-engine.vercel.app)
 
 A cloud-based data pipeline that ingests, cleans, and aggregates 180,000+ supply chain order records, storing raw and processed data in AWS S3 and serving analytics through a live dashboard.
 
@@ -28,9 +28,6 @@ Raw operational data (orders, shipments, delivery performance) is only useful on
 - Raw and cleaned data live in S3 (the "data lake" layer); only aggregated summary tables live in Postgres (the "serving layer") — the dashboard never queries 180K raw rows directly, keeping it fast.
 - Parquet used over CSV for intermediate storage — columnar format, smaller size, preserves types.
 - Pipeline runs as a single containerized process (Docker), decoupled from the API/dashboard, so it can be re-run independently (e.g., on a schedule) without touching the live app.
-
-## Try it live
-[Dashboard](https://supply-chain-analytics-engine.vercel.app) — pulls live data from the deployed Flask API.
 
 ## Setup (run the pipeline locally)
 1. `pip install -r requirements.txt`
