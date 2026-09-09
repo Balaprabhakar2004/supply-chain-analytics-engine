@@ -1,4 +1,8 @@
-# Supply Chain Analytics Engine | [Try Live Dashboard](https://supply-chain-analytics-engine.vercel.app)
+# Supply Chain Analytics Engine
+
+## Try it live
+
+[Dashboard](https://supply-chain-analytics-engine.vercel.app) — pulls live data from the deployed Flask API.
 
 A cloud-based data pipeline that ingests, cleans, and aggregates 180,000+ supply chain order records, storing raw and processed data in AWS S3 and serving analytics through a live dashboard.
 
